@@ -7,7 +7,7 @@ This is simple URL shortener and stats viewer, that uses VK API.
 
 Python 3 has to be already installed.
 
-Use `pip` to install dependencies:
+Use `pip` (or `pip3`, if there is a conflict with Python2) to install dependencies:
 ```
 pip install -r requirements.txt
 ```

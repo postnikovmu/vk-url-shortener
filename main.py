@@ -2,6 +2,7 @@ import requests
 import os
 from dotenv import load_dotenv
 from urllib.parse import urlparse
+import argparse
 
 
 def is_short_link(token, link):
@@ -80,7 +81,10 @@ def main():
     load_dotenv()
     vk_service_token = os.environ['VK_SERVICE_TOKEN']
 
-    link = input('Input the link: ')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("link")
+    args = parser.parse_args()
+    link = args.link
 
     short_link = ''
     clicks_count = 0
